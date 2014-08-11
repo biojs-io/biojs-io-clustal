@@ -2,6 +2,10 @@ biojs-io-clustal
 ----------------
 
 [![Build Status](https://drone.io/github.com/biojs/biojs-io-clustal/status.png)](https://drone.io/github.com/biojs/biojs-io-clustal/latest)
+[![NPM version](http://img.shields.io/npm/v/biojs-io-clustal.svg)](https://www.npmjs.org/package/biojs-io-clustal)
+[![Dependencies](https://david-dm.org/biojs/biojs-io-clustal.png)](https://david-dm.org/biojs/biojs-io-clustal)
+[![Code Climate](https://codeclimate.com/github/biojs/biojs-io-clustal/badges/gpa.svg)](https://codeclimate.com/github/biojs/biojs-io-clustal)
+[![NPM downloads](http://img.shields.io/npm/dm/biojs-io-clustal.svg)](https://www.npmjs.org/package/biojs-io-clustal)
 
 ```
 npm install biojs-io-clustal
