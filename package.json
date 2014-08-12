@@ -1,7 +1,7 @@
 {
   "name": "biojs-io-clustal",
   "description": "Parses clustal files",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "homepage": "http://github.com/biojs/biojs-io-clustal",
   "repository": {
     "type": "git",
@@ -32,7 +32,7 @@
   "main": "lib/clustal.js",
   "scripts": {
     "test": "mocha --ui qunit --reporter spec",
-    "prepublish":   "coffee --bare --compile --output lib/ src/*.coffee",
+    "prepublish":   "npm run build-browser; coffee --bare --compile --output lib/ src/*.coffee",
     "build-browser": "mkdir -p build;browserify -t coffeeify --extension='.coffee'  browser.js > build/biojs_io_clustal.min.js"
   },
   "license": "Apache 2"
