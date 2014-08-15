@@ -16,6 +16,8 @@ Use in your browser
 
 [Download](https://drone.io/github.com/biojs/biojs-io-clustal/files) a compiled version for browser use.
 
+Try out in [RequireBin](http://requirebin.com/?gist=3d961da653a8fd44e68d) or in [Codepen](http://codepen.io/greenify/pen/lnwzs).
+
 ```
 npm run build-browser
 ```
