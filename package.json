@@ -26,9 +26,15 @@
     "watchify": "^1.0.1"
   },
   "keywords": [
-    "bio",
+    "biojs",
     "clustal"
   ],
+  "shields": {
+  	"build": {
+  	  "img": "https://travis-ci.org/greenify/biojs-io-clustal.svg?branch=master",
+  	  "href": "https://travis-ci.org/greenify/biojs-io-clustal"
+	},
+  },
   "main": "lib/clustal.js",
   "scripts": {
     "test": "node_modules/mocha/bin/mocha --ui qunit --reporter spec",
