@@ -1,7 +1,7 @@
 {
   "name": "biojs-io-clustal",
   "description": "Parses clustal files",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "homepage": "http://github.com/greenify/biojs-io-clustal",
   "repository": {
     "type": "git",
@@ -33,7 +33,7 @@
   	"build": {
   	  "img": "https://travis-ci.org/greenify/biojs-io-clustal.svg?branch=master",
   	  "href": "https://travis-ci.org/greenify/biojs-io-clustal"
-	},
+	}
   },
   "main": "lib/clustal.js",
   "scripts": {
