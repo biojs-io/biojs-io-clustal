@@ -8,7 +8,11 @@ class Clustal extends GenericReader
   @parse: (text) ->
     seqs = []
 
-    lines = text.split("\n")
+    if Object::toString.call(text) is '[object Array]'
+      lines = text
+    else
+      lines = text.split("\n")
+
     # The first line in the file must start with the words "CLUSTAL"
     if lines[0][0..5] is not "CLUSTAL"
       throw new Error "Invalid CLUSTAL Header"
