@@ -1,7 +1,7 @@
 {
   "name": "biojs-io-clustal",
   "description": "Parses clustal files",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "homepage": "http://github.com/greenify/biojs-io-clustal",
   "repository": {
     "type": "git",
@@ -12,7 +12,7 @@
     "email": "greeenify@gmail.com"
   },
   "dependencies": {
-    "biojs-utils-seqtools": "^0.1.4",
+    "biojs-utils-seqtools": "^0.1.6",
     "xhr": "^1.17.1"
   },
   "devDependencies": {
