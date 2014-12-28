@@ -53,15 +53,18 @@ class Clustal extends GenericReader
           # check for the first block
           if seqCounter >= seqs.length
 
-            [label, meta] = st.getMeta(label)
+            obj = st.getMeta(label)
+            label = obj.name
+
             cSeq = new st.model(sequence, label, seqCounter)
-            cSeq.meta = meta
+            cSeq.ids = obj.ids || {}
+            cSeq.details = obj.details || {}
             seqs.push cSeq
           else
             seqs[seqCounter].seq += sequence
 
           seqCounter++
         else
-          console.log line
+          console.log "parse error", line
 
     return seqs
