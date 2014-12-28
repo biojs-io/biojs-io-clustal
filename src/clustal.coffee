@@ -1,6 +1,5 @@
-Str = require("./strings")
 GenericReader = require("./generic_reader")
-Seq = require("./seq")
+st = require "biojs-utils-seqtools"
 
 module.exports =
 class Clustal extends GenericReader
@@ -38,7 +37,7 @@ class Clustal extends GenericReader
         continue
       else
         # ignore annotations
-        if Str.contains line , "*"
+        if st.contains line , "*"
           continue
         if blockstate is 1
           # new block recognized - reset
@@ -53,7 +52,11 @@ class Clustal extends GenericReader
 
           # check for the first block
           if seqCounter >= seqs.length
-            seqs.push new Seq(sequence, label, seqCounter)
+
+            [label, meta] = st.getMeta(label)
+            cSeq = new st.model(sequence, label, seqCounter)
+            cSeq.meta = meta
+            seqs.push cSeq
           else
             seqs[seqCounter].seq += sequence
 
