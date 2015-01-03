@@ -61,7 +61,7 @@ class Clustal extends GenericReader
             cSeq.details = obj.details || {}
 
             keys = Object.keys cSeq.ids
-            if keys > 0
+            if keys.length > 0
               cSeq.id = cSeq.ids[keys[0]]
             seqs.push cSeq
           else
