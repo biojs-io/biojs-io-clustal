@@ -59,6 +59,10 @@ class Clustal extends GenericReader
             cSeq = new st.model(sequence, label, seqCounter)
             cSeq.ids = obj.ids || {}
             cSeq.details = obj.details || {}
+
+            keys = Object.keys cSeq.ids
+            if keys > 0
+              cSeq.id = cSeq.ids[keys[0]]
             seqs.push cSeq
           else
             seqs[seqCounter].seq += sequence
