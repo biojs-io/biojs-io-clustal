@@ -1,10 +1,9 @@
-GenericReader = require("./generic_reader")
+GenericReader = require "biojs-io-parser"
 st = require "msa-seqtools"
 
-module.exports =
-class Clustal extends GenericReader
+module.exports = Clustal =
 
-  @parse: (text) ->
+  parse: (text) ->
     seqs = []
 
     if Object::toString.call(text) is '[object Array]'
@@ -72,3 +71,5 @@ class Clustal extends GenericReader
           console.log "parse error", line
 
     return seqs
+
+GenericReader.mixin Clustal

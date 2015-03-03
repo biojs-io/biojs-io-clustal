@@ -18,24 +18,31 @@ Use in your browser
 
 Try out in [RequireBin](http://requirebin.com/?gist=3d961da653a8fd44e68d) or in [Codepen](http://codepen.io/greenify/pen/lnwzs).
 
-```
-npm run build-browser
-```
-
-The namespace is `biojs.io.clustal`.
-
 How-to
 ------
 
-### 1. read a url
+#### `read(url)`
+
+Parses an url an calls your `parse` method with the returned body.
 
 ```
-Clustal.read(url, function(seqs) { }
+Clustal.read("https://raw.githubusercontent.com/greenify/biojs-io-clustal/blob/master/test/p53.clustalo.clustal", function(err, model) {
+	// model is the parsed url
+});
+```
+If callback is undefined, `read` returns a promise.
+
+```
+Clustal.read("https://raw.githubusercontent.com/greenify/biojs-io-clustal/blob/master/test/p53.clustalo.clustal").then(function(model) {
+	// model is the parsed url
+}, function(err){
+	console.error("err happened during downloading", err);
+});
 ```
 
 `function` is your async callback.
 
-### 2. parse string
+### `parse(str)`
 
 ```
 var seqs = Clustal.parse(str);
@@ -49,3 +56,8 @@ this.seq
 this.name 
 this.id 
 ```
+
+License
+-------
+
+Apache 2
