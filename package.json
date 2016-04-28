@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "biojs-io-parser": "^1.0.0",
-    "msa-seqtools": "^0.1.6"
+    "msa-seqtools": "^0.1.8"
   },
   "devDependencies": {
     "browserify": "~4.2.0",
